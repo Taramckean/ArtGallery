@@ -45,12 +45,12 @@ class ArtistTest < MiniTest::Test
         assert_equal("Fauvism", results.first()["art_movement"])
       end
 
-      # def test_show_all_artists()
-      #   sql = "SELECT * FROM artists;"
-      #   result = artists.map {|artist| Artist.new(artist)}
-      #   return result
-      #   assert_equal(result.art_movement, "Fauvism, Portrait Realism")
-      # end
+      def test_show_all_artists()
+        sql = "SELECT * FROM artists;"
+        results = SqlRunner.run(sql)
+        artist_data = results.map {|result| Artist.new(result)}
+        assert_equal(2, artist_data.count())
+      end
 
       def test_delete_artist()
         @artist1.delete()

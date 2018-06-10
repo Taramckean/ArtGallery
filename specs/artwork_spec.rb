@@ -80,7 +80,7 @@ class ArtworkTest < MiniTest::Test
             sql = "SELECT * FROM artworks WHERE id = $1"
             values = [@artwork1.id()]
             results = SqlRunner.run(sql, values)
-            assert_equal(results.first()["category"], "Fauvism")
+            assert_equal("Fauvism", results.first()["category"])
           end
 
           def test_find_artwork()
@@ -88,7 +88,14 @@ class ArtworkTest < MiniTest::Test
             values = [@artwork1.id()]
             artwork = SqlRunner.run(sql, values)
             result = Artwork.new(artwork.first)
-            assert_equal(result.creation_year, 1908)
+            assert_equal(1908, result.creation_year)
+          end
+
+          def test_show_all_artworks()
+            sql = "SELECT * FROM artworks;"
+            results = SqlRunner.run(sql)
+            artwork_data = results.map {|result| Artwork.new(result)}
+            assert_equal(2, artwork_data.count())
           end
 
           def test_update_artwork()

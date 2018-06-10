@@ -6,7 +6,7 @@ class Artist
   attr_accessor :name, :birth_year, :art_movement
 
   def initialize(options)
-    @id = options['id'].to_i
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @birth_year = options['birth_year'].to_i
     @art_movement = options['art_movement']
@@ -21,7 +21,15 @@ def save()
   @id = artist_data.first()['id'].to_i
 end
 
-def delete()
+def self.find(id)
+  sql = "SELECT * FROM artists WHERE id = $1"
+  values = [id]
+  artist = SqlRunner.run(sql, values)
+  result = Artist.new(artist.first)
+  return result
+end
+
+def self.delete()
   sql = "DELETE FROM artists where id = $1"
   values = [@id]
   SqlRunner.run(sql, values)
@@ -34,6 +42,7 @@ end
 
 def self.all()
   sql = "SELECT * FROM artists;"
+  artists = SqlRunner.run(sql)
   result = artists.map {|artist| Artist.new(artist)}
   return result
 end
