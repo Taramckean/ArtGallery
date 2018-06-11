@@ -32,7 +32,7 @@ Artwork.delete_all()
         "materials" => "Oil on Canvas",
         "category" => "Fauvism",
         "creation_year" => 1908,
-        "image" => "public/the_dessert_harmony_in_red.jpg",
+        "image" => "/the_dessert_harmony_in_red.jpg",
         "artist_id" => @artist1.id
         })
         @artwork1.save()
@@ -42,7 +42,7 @@ Artwork.delete_all()
           "materials" => "Oil on Canvas",
           "category" => "Expressionism",
           "creation_year" => 1985,
-          "image" => "public/Reflection_self_portrait.jpg",
+          "image" => "/Reflection_self_portrait.jpg",
           "artist_id" => @artist2.id
           })
           @artwork2.save()
@@ -52,7 +52,7 @@ Artwork.delete_all()
             "materials" => "Oil on Canvas",
             "category" => "Surrealism",
             "creation_year" => 1959,
-            "image" => "public/giacometti_seated_man.jpg",
+            "image" => "/giacometti_seated_man.jpg",
             "artist_id" => @artist3.id
             })
             @artwork3.save()

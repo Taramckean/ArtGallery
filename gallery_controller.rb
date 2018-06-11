@@ -32,6 +32,11 @@ post '/gallery/artists' do
   redirect to '/gallery/artists'
 end
 
+get '/gallery/artworks/:id' do
+  @artworks = Artwork.find(params[:id])
+  erb(:view_artwork)
+end
+
 get '/gallery/new_artwork' do
   erb(:new_artwork)
 end
@@ -39,6 +44,17 @@ end
 post '/gallery/artworks' do
   Artwork.new(params).save()
   redirect to '/gallery/artworks'
+end
+
+get '/gallery/artworks/:id/edit' do
+  @artworks = Artwork.find(params[:id])
+  erb(:edit)
+end
+
+post '/gallery/artworks/:id' do
+  artwork = Artwork.new(params)
+  artwork.update()
+  redirect to 'gallery/artworks'
 end
 
 post '/gallery/artists/:id/delete' do
@@ -49,15 +65,4 @@ end
 post '/gallery/artworks/:id/delete' do
   Artwork.delete(params[:id])
   redirect to '/gallery/artworks'
-end
-
-get '/gallery/:id/edit'
-@artworks = Artwork.find(params['id'])
-erb(:edit)
-end
-
-post '/gallery/artworks/:id'
-artwork = Artwork.new(params)
-artwork.update
-redirect to 'gallery/artworks'
 end

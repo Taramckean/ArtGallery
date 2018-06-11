@@ -1,13 +1,17 @@
+<br>
+<br>
+<br>
+
 <a href="/gallery/new_artwork">Add new artwork</a>
 
 <% for artwork in @artworks %>
-<p>Title: <%= artwork.title() %></p>
-<p>Artist: <%= artwork.artist_id() %></p>
-<p>Image: <%= artwork.image() %></p>
+<p><%= artwork.title() %></p>
+<img class ="image_size" src="<%= artwork.image() %>" alt="<%=artwork.title%>">
+<p><%= artwork.artist_id() %></p>
 
-<a class ="visitor_button" href="/artworks/<%= @artwork%>/view_artwork">View</a>
+<a class="visitorbutton" href="/gallery/artworks/<%= artwork.id%>">View artwork</a>
 
-<a class ="button" href="/artworks/<%= @artwork%>/edit">Edit</a>
+<a class="button" href="/gallery/artworks/<%= artwork.id%>/edit">Edit</a>
 
 <form action="/gallery/artworks/<%= artwork.id%>/delete" method="post">
   <input class= "button" type="submit" value ="Delete"/>

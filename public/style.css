@@ -15,11 +15,11 @@ h1 {
 }
 
 body{
-  margin-top: auto;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: auto;
-  /* padding-top: 90px; */
+ margin-bottom: auto;
+    /* padding-top: 90px; */ */
 }
 ul {
   border-bottom: 2px solid black;
@@ -71,25 +71,25 @@ a:hover{
   font-family: gill sans;
 }
 
-.visitor_button {
-  background-color: darkred;
+.visitorbutton {
+  background-color: brown;
   border: 0px;
   border-radius: 15px;
   color: white;
   opacity:0.8;
   margin: 10px;
   opacity: 0.8;
-  padding: 10px 15px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.2s;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
 }
 
-.visitor_button:hover {
+.visitorbutton:hover {
   background-color: maroon;
   color: white;
 }
@@ -103,17 +103,23 @@ a:hover{
   opacity:0.8;
   margin: 10px;
   opacity: 0.8;
-  padding: 10px 15px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.2s;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
 }
 
 .button:hover {
   background-color: DeepSkyBlue;
   color: white;
+}
+
+.image_size{
+  width: 50%;
+    height:50%;
+
 }

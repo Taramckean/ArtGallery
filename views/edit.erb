@@ -1,0 +1,28 @@
+<h1>Edit artwork</h1>
+
+<div class="centered">
+  <form method="POST" action="/gallery/artworks/<%=@artworks.id%>">
+
+
+    <label for="title">Title</label>
+    <input type="text" name="title" id="name" value="<%= @artworks.title%>" />
+
+    <label for="materials">Materials</label>
+    <input type="text" name="materials" id="materials" value="<%= @artworks.materials%>"/>
+
+    <label for="category">Genre</label>
+    <input type="text" name="category" id="category" value="<%= @artworks.category%>"/>
+
+    <label for="creation_year">Year of Creation</label>
+    <input type="number" name="creation_year" id="creation_year" value="<%= @artworks.creation_year%>"/>
+
+    <label for="image">Image URL</label>
+    <input type="text" name="image" id="image" value="<%= @artworks.image%>"/>
+
+    <label for="artist_id">Artist Id</label>
+    <input type="text" name="artist_id" id="artist_id" value="<%= @artworks.artist_id%>"/>
+
+    <input class ="button" type="submit" value="Update artwork"/>
+
+  </form>
+</div>
