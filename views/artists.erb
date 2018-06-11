@@ -1,8 +1,10 @@
 <img src="/freud_page2.png" class="responsive-image">
 
-<a href="/gallery/new_artist">Add new artist</a>
+<a class="newbutton" href="/gallery/new_artist">Add new artist</a>
+
 
 <% for artist in @artists %>
+
 <p>Name: <%= artist.name() %></p>
 <p>Year of birth: <%= artist.birth_year() %></p>
 <p>Genre: <%= artist.art_movement() %></p>
@@ -10,5 +12,6 @@
 <form action="/gallery/artists/<%= artist.id%>/delete" method="post">
   <input class= "button" type="submit" value ="Delete"/>
 </form>
+
 
 <% end %>

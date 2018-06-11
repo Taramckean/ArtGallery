@@ -47,6 +47,7 @@ post '/gallery/artworks' do
 end
 
 get '/gallery/artworks/:id/edit' do
+  @artists = Artist.all()
   @artworks = Artwork.find(params[:id])
   erb(:edit)
 end

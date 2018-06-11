@@ -2,9 +2,9 @@
 <br>
 <br>
 
-<a href="/gallery/new_artwork">Add new artwork</a>
+<a class ="newbutton" href="/gallery/new_artwork">Add new artwork</a>
 
-<% for artwork in @artworks %>
+<div class = "centre"><% for artwork in @artworks %>
 <p><%= artwork.title() %></p>
 <img class ="image_size" src="<%= artwork.image() %>" alt="<%=artwork.title%>">
 <p><%= artwork.artist_id() %></p>
@@ -18,3 +18,4 @@
 </form>
 
 <% end %>
+</div>

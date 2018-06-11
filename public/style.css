@@ -71,26 +71,26 @@ a:hover{
   font-family: gill sans;
 }
 
+
 .visitorbutton {
-  background-color: brown;
+  background-color: hotpink;
   border: 0px;
-  border-radius: 15px;
+  border-radius: 25px;
   color: white;
   opacity:0.8;
   margin: 10px;
-  opacity: 0.8;
-  padding: 10px 10px;
+  padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px
+  font-size: 15px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.2s;
-  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2), 0 4px 4px 0 rgba(0,0,0,0.19);
 }
 
 .visitorbutton:hover {
-  background-color: maroon;
+  background-color: deeppink;
   color: white;
 }
 
@@ -98,28 +98,64 @@ a:hover{
 .button {
   background-color: Skyblue;
   border: 0px;
-  border-radius: 15px;
+  border-radius: 25px;
   color: white;
   opacity:0.8;
   margin: 10px;
-  opacity: 0.8;
   padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px
+  font-size: 15px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.2s;
-  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2), 0 4px 4px 0 rgba(0,0,0,0.19);
 }
 
 .button:hover {
   background-color: DeepSkyBlue;
   color: white;
 }
+.newbutton {
+  background-color:White;
+  border: 0px;
+  border-radius: 25px;
+  color: black;
+  opacity:0.8;
+  margin: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+     border: 1.5px solid black;
+}
+
+.newbutton:hover {
+  background-color: black;
+  color: white;
+   border: 2px solid black;
+}
+/* .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 10px;
+} */
 
 .image_size{
   width: 50%;
     height:50%;
 
+}
+.footer {
+  position: static;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  color: black;
 }
