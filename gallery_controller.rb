@@ -42,7 +42,22 @@ post '/gallery/artworks' do
 end
 
 post '/gallery/artists/:id/delete' do
-  artist = Artist.find(params['id'])
-  artist.delete()
+  Artist.delete(params[:id])
   redirect to '/gallery/artists'
+end
+
+post '/gallery/artworks/:id/delete' do
+  Artwork.delete(params[:id])
+  redirect to '/gallery/artworks'
+end
+
+get '/gallery/:id/edit'
+@artworks = Artwork.find(params['id'])
+erb(:edit)
+end
+
+post '/gallery/artworks/:id'
+artwork = Artwork.new(params)
+artwork.update
+redirect to 'gallery/artworks'
 end

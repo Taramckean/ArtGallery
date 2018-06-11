@@ -7,9 +7,7 @@
 <p>Year of birth: <%= artist.birth_year() %></p>
 <p>Genre: <%= artist.art_movement() %></p>
 
-<a class ="button" href="/artists/<%= @artist%>/edit">Edit</a>
-
-<form action="/artists/<%= artist.id%>/delete">
+<form action="/gallery/artists/<%= artist.id%>/delete" method="post">
   <input class= "button" type="submit" value ="Delete"/>
 </form>
 

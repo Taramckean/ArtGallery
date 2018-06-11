@@ -5,4 +5,12 @@
 <p>Artist: <%= artwork.artist_id() %></p>
 <p>Image: <%= artwork.image() %></p>
 
+<a class ="visitor_button" href="/artworks/<%= @artwork%>/view_artwork">View</a>
+
+<a class ="button" href="/artworks/<%= @artwork%>/edit">Edit</a>
+
+<form action="/gallery/artworks/<%= artwork.id%>/delete" method="post">
+  <input class= "button" type="submit" value ="Delete"/>
+</form>
+
 <% end %>

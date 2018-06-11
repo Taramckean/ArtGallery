@@ -24,9 +24,9 @@ def save()
   @id = artwork_data.first()['id'].to_i
 end
 
-def delete()
+def self.delete(id)
   sql = "DELETE FROM artworks where id = $1"
-  values = [@id]
+  values = [id]
   SqlRunner.run(sql, values)
 end
 

@@ -71,6 +71,30 @@ a:hover{
   font-family: gill sans;
 }
 
+.visitor_button {
+  background-color: darkred;
+  border: 0px;
+  border-radius: 15px;
+  color: white;
+  opacity:0.8;
+  margin: 10px;
+  opacity: 0.8;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.2s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.visitor_button:hover {
+  background-color: maroon;
+  color: white;
+}
+
+
 .button {
   background-color: Skyblue;
   border: 0px;

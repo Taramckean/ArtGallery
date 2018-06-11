@@ -29,9 +29,9 @@ def self.find(id)
   return result
 end
 
-def self.delete()
+def self.delete(id)
   sql = "DELETE FROM artists where id = $1"
-  values = [@id]
+  values = [id]
   SqlRunner.run(sql, values)
 end
 
