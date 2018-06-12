@@ -15,6 +15,7 @@ get '/gallery/artists' do
 end
 
 get '/gallery/collections' do
+@artists = Artist.all()
   erb(:collections)
 end
 
@@ -32,12 +33,18 @@ post '/gallery/artists' do
   redirect to '/gallery/artists'
 end
 
+get '/gallery/artists/:id' do
+  @artists = Artist.find(params[:id])
+  erb(:view_artist)
+end
+
 get '/gallery/artworks/:id' do
   @artworks = Artwork.find(params[:id])
   erb(:view_artwork)
 end
 
 get '/gallery/new_artwork' do
+    @artists = Artist.all()
   erb(:new_artwork)
 end
 

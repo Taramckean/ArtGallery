@@ -35,6 +35,11 @@ def self.delete_all()
   SqlRunner.run(sql)
 end
 
+def artist()
+  artist = Artist.find(@artist_id)
+  return artist
+end
+
 def self.all()
   sql = "SELECT * FROM artworks"
   artworks = SqlRunner.run(sql)

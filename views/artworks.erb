@@ -2,20 +2,20 @@
 <br>
 <br>
 
-<a class ="newbutton" href="/gallery/new_artwork">Add new artwork</a>
+<div class ="center-button"><a class ="newbutton" href="/gallery/new_artwork">Add new artwork</a>
+</div>
+<div class = "center-content"><% for artwork in @artworks %>
+  <p><%= artwork.title() %></p>
+  <img class ="image_size" src="<%= artwork.image() %>" alt="<%=artwork.title%>">
+  <p><%= artwork.artist.name() %></p>
 
-<div class = "centre"><% for artwork in @artworks %>
-<p><%= artwork.title() %></p>
-<img class ="image_size" src="<%= artwork.image() %>" alt="<%=artwork.title%>">
-<p><%= artwork.artist_id() %></p>
+  <a class="visitorbutton" href="/gallery/artworks/<%= artwork.id%>">View artwork</a>
+<br>
+  <a class="button" href="/gallery/artworks/<%= artwork.id%>/edit">Edit</a>
 
-<a class="visitorbutton" href="/gallery/artworks/<%= artwork.id%>">View artwork</a>
+  <form class ="flex-form" action="/gallery/artworks/<%= artwork.id%>/delete" method="post">
+    <input class= "button" type="submit" value ="Delete"/>
+  </form>
 
-<a class="button" href="/gallery/artworks/<%= artwork.id%>/edit">Edit</a>
-
-<form action="/gallery/artworks/<%= artwork.id%>/delete" method="post">
-  <input class= "button" type="submit" value ="Delete"/>
-</form>
-
-<% end %>
+  <% end %>
 </div>

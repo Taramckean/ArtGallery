@@ -21,6 +21,14 @@ def save()
   @id = artist_data.first()['id'].to_i
 end
 
+def artworks()
+  sql = "SELECT * from artworks where artist_id = $1"
+  values = [@id]
+  artworks = SqlRunner.run(sql, values)
+  result = artworks.map {|artwork| Artwork.new(artwork)}
+  return result
+end
+
 def self.find(id)
   sql = "SELECT * FROM artists WHERE id = $1"
   values = [id]

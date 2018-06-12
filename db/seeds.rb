@@ -32,7 +32,7 @@ Artwork.delete_all()
         "materials" => "Oil on Canvas",
         "category" => "Fauvism",
         "creation_year" => 1908,
-        "image" => "/the_dessert_harmony_in_red.jpg",
+        "image" => "/the-dessert-harmony-in-red.jpg",
         "artist_id" => @artist1.id
         })
         @artwork1.save()
@@ -56,6 +56,67 @@ Artwork.delete_all()
             "artist_id" => @artist3.id
             })
             @artwork3.save()
+
+            @artwork4 = Artwork.new({
+              "title" => "Portrait of John Deakin",
+              "materials" => "Oil on Canvas",
+              "category" => "Realism",
+              "creation_year" => 1963,
+              "image" => "/Lucian-Freud_Portrait-of-John-Deakin-1963-1964.jpg",
+              "artist_id" => @artist2.id
+              })
+              @artwork4.save()
+
+              @artwork5 = Artwork.new({
+                "title" => "Sorrow of the King",
+                "materials" => "Collage",
+                "category" => "Fauvism",
+                "creation_year" => 1952,
+                "image" => "/Tristess-du-Roi-Sorrow-of-the-King-1952.jpg",
+                "artist_id" => @artist1.id
+                })
+                @artwork5.save()
+
+                @artwork6 = Artwork.new({
+                  "title" => "Diego",
+                  "materials" => "Oil on Canvas",
+                  "category" => "Expressionism",
+                  "creation_year" => 1959,
+                  "image" => "/giacometti-04.jpg",
+                  "artist_id" => @artist3.id
+                  })
+                  @artwork6.save()
+
+                  @artwork7 = Artwork.new({
+                    "title" => "The Painter's Mother III.jpg",
+                    "materials" => "Oil on Canvas",
+                    "category" => "Realism",
+                    "creation_year" => 1972,
+                    "image" => "/portrait_of_a_woman.jpg",
+                    "artist_id" => @artist2.id
+                    })
+                    @artwork7.save()
+
+                    @artwork8 = Artwork.new({
+                      "title" => "The Joy of Life.jpg",
+                      "materials" => "Oil on Canvas",
+                      "category" => "Fauvism",
+                      "creation_year" => 1905,
+                      "image" => "/Joy_of_Life_1905.jpg",
+                      "artist_id" => @artist1.id
+                      })
+                      @artwork8.save()
+
+                      @artwork9 = Artwork.new({
+                        "title" => "Portrait Of David Thompson",
+                        "materials" => "Oil on Canvas",
+                        "category" => "Expressionism",
+                        "creation_year" => 1957,
+                        "image" => "/giacometti-01.jpg",
+                        "artist_id" => @artist3.id
+                        })
+                        @artwork9.save()
+
             artworks = Artwork.all()
             artists = Artist.all()
 
