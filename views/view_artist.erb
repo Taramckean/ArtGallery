@@ -1,11 +1,13 @@
 
 <br>
-<div class="center-button"><h1><%= @artists.name() %></h1>
+
+<h1><%= @artists.name() %></h1>
 
   <p>Born: <%= @artists.birth_year() %></p>
   <p>Genre: <%= @artists.art_movement() %></p>
 
-<% for artwork in @artists.artworks %>
-  <img class ="image-size" src="<%= artwork.image() %>">
+
+<div class = "center-content"><% for artwork in @artists.artworks %>
+<img class="image_size" src="<%= artwork.image() %>">
 <% end %>
 </div>

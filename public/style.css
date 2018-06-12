@@ -14,6 +14,7 @@ h1 {
   text-align: center;
   font-size: 25px;
   text-transform: uppercase;
+  margin-top: 80px;
 }
 
 body{
@@ -21,6 +22,8 @@ body{
   margin-left: auto;
   margin-right: auto;
  margin-bottom: auto;
+ text-align: center;
+
     /* padding-top: 90px; */ */
 }
 ul {
@@ -29,7 +32,9 @@ ul {
   padding-bottom: 15px;
   margin-top: auto;
   margin-bottom: 0;
+  text-align: left;
 }
+
 .nav {
   display: block;
   background-color: white;
@@ -37,7 +42,6 @@ ul {
   position: fixed;
   width: 100%;
   top:0;
-
 }
 
 .nav li {
@@ -53,6 +57,9 @@ ul {
 }
 .nav li a {
   color: black;
+  /* w */
+  background-color: white;
+  padding: 5px;
 }
 .nav a:hover {
   text-decoration: underline;
@@ -87,20 +94,34 @@ a:hover{
   margin: 0 auto;
   text-align: center;
 }
-.container {
+.banner-container {
   width:99%;
     background-size: 100% 100%;
     border: dotted 2px black;
     margin-top: 40px;
     margin-bottom: 40px;
 }
+
+.banner-container:hover{
+  opacity: 0.7;
+}
+
+
 .flex-form{
   display: inline-flex;
 }
 
-.flex {
-  flex: auto;
+.container {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+align-content: space-between;
 }
+.item {
+  flex-grow: 1;
+}
+
 
 input{
   margin-bottom: 10px;
@@ -123,7 +144,7 @@ input[type=text]:focus {
 }
 
 .visitorbutton {
-  background-color: hotpink;
+  background-color: DeepSkyBlue;
   border: 0px;
   border-radius: 25px;
   color: white;
@@ -140,13 +161,13 @@ input[type=text]:focus {
 }
 
 .visitorbutton:hover {
-  background-color: deeppink;
+  background-color: lightskyblue;
   color: white;
 }
 
 
 .button {
-  background-color: Skyblue;
+  background-color: hotpink;
   border: 0px;
   border-radius: 25px;
   color: white;
@@ -163,7 +184,7 @@ input[type=text]:focus {
 }
 
 .button:hover {
-  background-color: DeepSkyBlue;
+  background-color: lightpink;
   color: white;
 }
 .newbutton {
@@ -189,12 +210,10 @@ input[type=text]:focus {
   color: white;
    border: 2px solid black;
 }
-/* .flex-container {
-  display: flex;
-  height: 200px;
-  align-items: center;
-  align-content: space-between;
-} */
+.black {
+  background-color: #313438;
+  color: #e0dddd;
+}
 
 .image_size{
   width: 50%;
@@ -206,6 +225,14 @@ input[type=text]:focus {
 
 .image_size:hover{
 opacity:0.8;
+}
+
+.image_size_other{
+  width: 50%;
+    height:50%;
+    opacity: 1;
+    padding-bottom: 15px;
+
 }
 .footer {
   position: static;

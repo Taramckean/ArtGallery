@@ -1,10 +1,11 @@
 
 <br>
-
+<body class ="black">
 <h1><%= @artworks.title() %></h1>
 
-<div class="center-button"><img class ="image_size" src="<%= @artworks.image() %>" alt="<%=@artworks.title%>">
+<div class="center-button"><img class ="image_size_other" src="<%= @artworks.image() %>" alt="<%=@artworks.title%>">
 <p><%= @artworks.materials() %></p>
 <p><%= @artworks.category() %></p>
 <p><%= @artworks.artist.name() %></p>
 </div>
+</body>

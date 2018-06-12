@@ -88,7 +88,7 @@ Artwork.delete_all()
                   @artwork6.save()
 
                   @artwork7 = Artwork.new({
-                    "title" => "The Painter's Mother III.jpg",
+                    "title" => "The Painter's Mother III",
                     "materials" => "Oil on Canvas",
                     "category" => "Realism",
                     "creation_year" => 1972,
@@ -98,7 +98,7 @@ Artwork.delete_all()
                     @artwork7.save()
 
                     @artwork8 = Artwork.new({
-                      "title" => "The Joy of Life.jpg",
+                      "title" => "The Joy of Life",
                       "materials" => "Oil on Canvas",
                       "category" => "Fauvism",
                       "creation_year" => 1905,

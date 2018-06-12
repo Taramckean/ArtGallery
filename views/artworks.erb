@@ -6,7 +6,7 @@
 </div>
 <div class = "center-content"><% for artwork in @artworks %>
   <p><%= artwork.title() %></p>
-  <img class ="image_size" src="<%= artwork.image() %>" alt="<%=artwork.title%>">
+    <a href="/gallery/artworks/<%= artwork.id%>"><img class ="image_size" src="<%= artwork.image() %>" alt="<%=artwork.title%>"></a>
   <p><%= artwork.artist.name() %></p>
 
   <a class="visitorbutton" href="/gallery/artworks/<%= artwork.id%>">View artwork</a>

@@ -1,15 +1,18 @@
 <h1>Add New Artist</h1>
 
-<div class="centered">
+<main class="centered">
   <form method="POST" action="/gallery/artists">
 
-    <input type="text" name="name" id="name" placeholder="Name"/>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name"/>
 
-    <input type="number" name="birth_year" id="birth_year" placeholder="Year of Birth"/>
+    <label for="birth_year">Year of Birth</label>
+    <input type="number" name="birth_year" id="birth_year"/>
 
-    <input type="text" name="art_movement" id="art_movement" placeholder="Genre"/>
+    <label for="genre">Genre</label>
+    <input type="text" name="art_movement" id="art_movement"/>
 
     <input class ="button" type="submit" value="Add Artist"/>
 
   </form>
-</div>
+</main>
