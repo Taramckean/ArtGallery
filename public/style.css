@@ -23,6 +23,7 @@ body{
   margin-right: auto;
  margin-bottom: auto;
  text-align: center;
+ font-family: gill sans;
 
     /* padding-top: 90px; */ */
 }
@@ -84,7 +85,7 @@ a:hover{
 
 .center-button{
   margin: 0 auto;
-  width: max-content;
+  width: unset;
   padding-top: 25px;
   padding-bottom: 25px;
   text-align: center;
@@ -112,11 +113,12 @@ a:hover{
 }
 
 .container {
-display: flex;
+display: flow-root;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 align-content: space-between;
+margin-bottom: 30px;
 }
 .item {
   flex-grow: 1;
@@ -157,7 +159,7 @@ input[type=text]:focus {
   font-size: 15px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.2s;
-  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2), 0 4px 4px 0 rgba(0,0,0,0.19);
+
 }
 
 .visitorbutton:hover {
@@ -167,26 +169,49 @@ input[type=text]:focus {
 
 
 .button {
-  background-color: hotpink;
+  background-color: red;
   border: 0px;
   border-radius: 25px;
   color: white;
   opacity:0.8;
   margin: 10px;
-  padding: 15px 15px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-flex;
   font-size: 15px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.2s;
-  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2), 0 4px 4px 0 rgba(0,0,0,0.19);
+
 }
 
 .button:hover {
-  background-color: lightpink;
+  background-color:  firebrick;
   color: white;
 }
+
+.edit-button {
+  background-color: forestgreen;
+  border: 0px;
+  border-radius: 25px;
+  color: white;
+  opacity:0.8;
+  margin: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  font-size: 15px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.2s;
+
+}
+
+.edit-button:hover {
+  background-color:  green;
+  color: white;
+}
+
 .newbutton {
   background-color:White;
   border: 0px;
@@ -194,14 +219,15 @@ input[type=text]:focus {
   color: black;
   opacity:0.8;
   margin: 10px;
-  padding: 10px 10px;
+  padding: 12px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 15px
+  font-size: 16px;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
      border: 1.5px solid black;
+font-family: gill sans;
 
 }
 
