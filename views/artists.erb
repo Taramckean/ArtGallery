@@ -1,11 +1,11 @@
 <img src="/freud_page2.png" class="responsive-image">
 
 <div class="center-button"><a class="newbutton" href="/gallery/new_artist"><i class="fa fa-plus">
-</i> Add new artist</a></div>
+</i> Add new artist</a>
 
 <div class="container">
-<% for artist in @artists %>
 
+<% for artist in @artists %>
 <p><%= artist.name.upcase() %></p>
 
 <a class="newbutton" href="/gallery/artists/<%= artist.id%>">View artist</a>
@@ -14,7 +14,9 @@
 <form class ="flex-form" action="/gallery/artists/<%= artist.id%>/delete" method="post">
   <input class= "button" type="submit" value ="Delete"/>
 </form>
-
-
+<br>
+  <hr width=20%>
+  <br>
 <% end %>
+</div>
 </div>
