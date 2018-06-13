@@ -6,13 +6,13 @@
 </div>
 <div class = "center-content"><% for artwork in @artworks %>
   <p><%= artwork.title() %></p>
-    <a href="/gallery/artworks/<%= artwork.id%>"><img class ="image_size" src="<%= artwork.image() %>" alt="<%=artwork.title%>"></a>
+  <a href="/gallery/artworks/<%= artwork.id%>"><img class ="image_size" src="<%= artwork.image() %>" alt="<%=artwork.title%>"></a>
   <p><%= artwork.artist.name() %></p>
 
   <a class="newbutton" href="/gallery/artworks/<%= artwork.id%>">View artwork</a>
-<br>
+  <br>
   <a class="edit-button" href="/gallery/artworks/<%= artwork.id%>/edit">Edit</a>
-
+  
   <form class ="flex-form" action="/gallery/artworks/<%= artwork.id%>/delete" method="post">
     <input class= "button" type="submit" value ="Delete"/>
   </form>
