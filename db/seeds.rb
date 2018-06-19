@@ -1,6 +1,5 @@
 require_relative('../models/artist')
 require_relative('../models/artwork')
-require('pry')
 
 Artist.delete_all()
 Artwork.delete_all()
@@ -120,5 +119,4 @@ Artwork.delete_all()
             artworks = Artwork.all()
             artists = Artist.all()
 
-            binding.pry
-            nil
+          

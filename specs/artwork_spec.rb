@@ -1,6 +1,5 @@
 require("minitest/autorun")
 require("minitest/rg")
-require("pry")
 require_relative("../models/artist")
 require_relative("../models/artwork")
 

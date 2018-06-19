@@ -1,6 +1,5 @@
 require( 'sinatra' )
-require( 'sinatra/contrib/all' )
-require( 'pry' )
+require( 'sinatra/contrib/all' ) if development?
 require_relative('../models/artwork')
 also_reload('../models/*')
 
