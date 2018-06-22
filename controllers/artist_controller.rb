@@ -1,7 +1,6 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' ) if development?
 require_relative('../models/artist')
-also_reload('../models/*')
 
 
 get '/gallery/artists' do

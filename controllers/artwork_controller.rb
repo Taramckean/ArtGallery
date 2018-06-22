@@ -1,8 +1,6 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' ) if development?
 require_relative('../models/artwork')
-also_reload('../models/*')
-
 
 get '/gallery/artworks' do
   @artworks = Artwork.all()
