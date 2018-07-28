@@ -44,4 +44,6 @@ I want to be able to find exhibits within a particular category
 So that I can find exhibits related to my interests
 
 Acceptance Criteria: The gallery manager should be able to add a category to an exhibit 
-Acceptance Criteria: The user should be able to filter the list of exhibits by category
+Acceptance Criteria: The user should be able to filter the list of exhibits by category.
+
+My finished project can be found here: https://theartgallery.herokuapp.com/.
